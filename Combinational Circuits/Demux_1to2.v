@@ -31,22 +31,22 @@ module demux_1to2_tb;
       .out1(out1));
     
   initial begin
-        data_in = 0;
-        sel = 0;
+        data_in = 1'b0;
+        sel = 1'b0;
        
 
         // Test cases
-      #10 data_in = 1; sel = 0; 
+      #10 data_in = 1'b1; sel = 1'b0; 
       $display("data_in= %b, sel= %b --> out0= %b,out1= %b",data_in,sel,out0,out1);
-      #10 sel = 1;
+      #10 sel = 1'b1;
       $display("data_in= %b, sel= %b --> out0= %b,out1= %b",data_in,sel,out0,out1);
-      #10 data_in = 0;
-      #10 sel = 0;
+      #10 data_in = 1'b0;
+      #10 sel = 1'b0;
       $display("data_in= %b, sel= %b --> out0= %b,out1= %b",data_in,sel,out0,out1);
-      #10 data_in = 1; sel = 1;
+      #10 data_in = 1'b1; sel = 1'b1;
       $display("data_in= %b, sel= %b --> out0= %b,out1= %b",data_in,sel,out0,out1);
-      #10 data_in = 0;
-      #10 sel = 0; 
+      #10 data_in = 1'b0;
+      #10 sel = 1'b0; 
       $display("data_in= %b, sel= %b --> out0= %b,out1= %b",data_in,sel,out0,out1);
       #10 $finish;
     end
