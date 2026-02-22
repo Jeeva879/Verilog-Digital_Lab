@@ -3,7 +3,7 @@
 //     DESIGN 
 //-----------------
 
-module half_adder (
+module half_adder_dataflow (
   input a,b,
   output sum,carry);
 
@@ -21,7 +21,7 @@ module half_adder_tb;
   reg a,b;
   wire sum,carry;
   
-  half_adder dut(.a(a),.b(b),.sum(sum),.carry(carry));    
+  half_adder_dataflow dut(.a(a),.b(b),.sum(sum),.carry(carry));    
   
   initial begin
     $display("-------------------------");
