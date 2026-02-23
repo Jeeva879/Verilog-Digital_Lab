@@ -40,7 +40,7 @@ module sr_flip_flop_tb;
     always #5 clk = ~clk;
 
     initial begin
-        $monitor("Time=%0t | RST=%b | S=%b | R=%b | Q=%b",$time, rst, s, r, q);
+        $monitor("RST=%b | S=%b | R=%b | Q=%b", rst, s, r, q);
     end
     
     initial begin
